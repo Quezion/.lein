@@ -24,6 +24,8 @@
             ;; visualize project dependency structure via `lein topology`
             [lein-topology "0.2.0"]
             ;; tries to keep warm Java VMs ready to go for faster startup
-            [lein-drip "0.1.1-SNAPSHOT"]]
+            ;; [lein-drip "0.1.1-SNAPSHOT"]
+            ;; Enables use of `lein exec path-to-clj-file` for shell scripting
+            [lein-exec "0.3.6"]]
   :ring {:nrepl {:start? true :port 9999}}
   :test-refresh {:notify-command ["terminal-notifier" "-title" "Tests" "-message"]}}}
