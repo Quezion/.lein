@@ -1,0 +1,4 @@
+repl-history/*
+self-installs/*
+.clj~*
+.DS_Store

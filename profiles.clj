@@ -3,10 +3,11 @@
                  [pjstadig/humane-test-output "0.8.1"]
                  ;; Provides functions for hot reloading dependencies
                  [alembic "0.3.2"]]
-  :injections [(require 'pjstadig.humane-test-output)
-               (pjstadig.humane-test-output/activate!)]
+  :injections [;;(require 'pjstadig.humane-test-output)
+               ;;(pjstadig.humane-test-output/activate!)
+               ]
   :plugins [;; Emacs server-side CIDER nREPL integration
-            [cider/cider-nrepl "0.14.0"]
+            [cider/cider-nrepl "0.15.0-SNAPSHOT"]
             ;; Emacs clj-refactor integration
             [refactor-nrepl "2.2.0"]
             ;; Color printing from lein REPLs
@@ -15,6 +16,8 @@
             [jonase/eastwood "0.2.3"]
             ;; Another Clojure LINTer
             [lein-kibit "0.1.3"]
+            ;; Emacs Flywheel dependency that is injected with nREPL
+            [acyclic/squiggly-clojure "0.1.8" :exclusions [org.clojure/tools.reader]]
             ;; Look for outdated dependencies via `lein ancient`
             [lein-ancient "0.6.10"]
             ;; Autorerun tests via `lein test-refresh`
